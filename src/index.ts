@@ -1,10 +1,10 @@
 import { registerPlugin } from '@capacitor/core';
 
-import type { unityadsPlugin } from './definitions';
+import type { UnityAdsWeb } from './definitions';
 
-const unityads = registerPlugin<unityadsPlugin>('unityads', {
-  web: () => import('./web').then((m) => new m.unityadsWeb()),
+const UnityAds = registerPlugin<UnityAdsWeb>('UnityAds', {
+  web: () => import('./web').then((m) => new m.UnityAdsWeb()),
 });
 
 export * from './definitions';
-export { unityads };
+export { UnityAds };
